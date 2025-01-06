@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "Task Queue API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/tasks",
+          "path": ["api", "tasks"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"type\": \"test\",\n    \"payload\": {\n        \"data\": \"test data\"\n    },\n    \"visibility_time\": \"2024-03-20T15:00:00Z\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Get All Tasks",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/tasks"
+        }
+      }
+    },
+    {
+      "name": "Get DLQ",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/dlq"
+        }
+      }
+    },
+    {
+      "name": "Clear DLQ",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{baseUrl}}/api/dlq"
+        }
+      }
+    },
+    {
+      "name": "Get Metrics",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/api/metrics"
+        }
+      }
+    }
+  ]
+} 

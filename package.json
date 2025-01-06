@@ -1,0 +1,23 @@
+{
+  "name": "task-queue-system",
+  "version": "1.0.0",
+  "description": "Async task queue system",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.2",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "jest": "^27.0.6",
+    "supertest": "^6.1.3"
+  }
+}
